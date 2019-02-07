@@ -8,6 +8,9 @@ var upload = multer({dest:'./uploads'})
 var Data = require('../models/data')
 var passport = require('passport')
 var localStrategy = require('passport-local').Strategy
+var mongo = require('mongodb')
+var mongoose = require('mongoose')
+var db = mongoose.connection
 /*  This is the home route. It renders the index.mustache page from the views directory.
 	Data is rendered using the Mustache templating engine. For more
 	information, view here: https://mustache.github.io/#demo */
@@ -31,8 +34,20 @@ router.get('/send', (req, res) => {
 router.get('/register', (req, res) => {
 	res.render('dash')
 })
+router.get('/class/creche', (req, res) => {
+	res.render('creche')
+	var dbo = db.db("mydb");
+  //Exclude the _id field from the result:
+  dbo.collection("Students-list").find({}, { projection: {  name: "creche"} }).toArray(function(err, result) {
+    if (err) throw err;
+    console.log(result);
+    db.close();
+})
+})
 router.get('/class', (req, res) => {
 	res.render('class')
+	
+  
 })
 
 /*  This route redirects requests to Turbo360. */
