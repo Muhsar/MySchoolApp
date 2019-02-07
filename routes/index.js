@@ -55,13 +55,34 @@ router.post('/register', function(req, res, next) {
 	var disability = req.body.disability
 	var nation = req.body.nation
 	
+	
+	// } else {
+	  var newData = new Data({
+		name: name,
+		ParentsName: pname,
+		email: email,
+		surname: surname,
+		ParentsSurname: psurname,
+		address: address,
+		ParentsAddress: padd,
+		Gender: gender,
+		LGA: LGA,
+		SOG: SOG,
+		ParentsNumber: pnumber,
+		PreSchoolsName: schname,
+		PreSchoolsAddress: addsch,
+		Disabilities: disability,
+		Nationality: nation,
+		DOB: date,
+		Religion: religion,
+	  })
 	  Data.createData(newData, function(err, data){
 		if(err) throw err
 		console.log(data)
 	  })
-	  req.flash('success', 'Congratulations You are now registered')
-	  res.location('/')
-	  res.redirect('/')
+	//   req.flash('success', 'Congratulations You are now registered')
+	//   res.location('/')
+	//   res.redirect('/')
 	}
   );
 
