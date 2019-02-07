@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+{{>head}}
+
+<body class="well container-fluid">
+	{{>header}}
+
+<div class="container-fluid">
+    <div class="wrap-title-event row">
+        <div class=" col-md-6 col-lg-3 nit nit1">
+            <div class="div">    
+            <ul>
+                        <li><a href="#">&#x23FA; Dashboard</a></li>
+                        <li><a href="/register">&#x2795; Register a new student</a></li>
+                        <li><a href="#">&#x1F389; Events</a></li>
+                </ul></div>
+        </div>
+
+         <div class="col-8">
+            <div id="title-event">
+            <h3>Jubsat Reg Form</h3>
+            <h6>Please Fill in the form</h6>
+            <h4>&#x1F4AE;&#x1F4AE;&#x1F4AE;Student Section&#x1F4AE;&#x1F4AE;&#x1F4AE;</h4>
+        </div> <hr>
+
+                <form action="/register" method="POST">
+
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" placeholder="Enter Your Child's Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Surname</label>
+                        <input type="text" name="surname" placeholder="Enter Your Child's Surname" class="form-control">
+                       </div>
+                    
+                    <!-- <div class="form-group">
+                        <label for="gender"> Choose your Child's Gender</label>
+                        <select name="gender">
+                            <option value="space"> </option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div> -->
+                    <!-- <div class="form-group">
+                        <label for="gender"></label>
+                        <input type="text" class="form-control" name="gender" placeholder="Enter child's gender"></div> -->
+                    <div class="form-group">
+                        <label for="religion"> Choose your Child's Religion</label>
+                        <select name="religion">
+                            <option value="space"> </option>
+                            <option value="islam">Islam</option>
+                            <option value="christianity">Christianity</option>
+                            <option value="traditional">Traditional</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="religion"></label>
+                        <input type="text" class="form-control" name="religion" placeholder="Input Child's Religion"></div>
+                    <div class="form-group">
+                        <label for="date">Date-Of-Birth</label>
+                        <input type="date" name="date"></div>
+                    <div class="form-group">
+                        <label for="disability">Any Form Of Disability</label>
+                        <input type="text" class="form-control" placeholder="Any Form Of Disability" name="disability"></div>
+                    <div class="form-group">
+                        <label for="nationality">Nationality</label>
+                        <input type="text" class="form-control" placeholder="Nationality" name="nation"></div>
+                    <div class="form-group">
+                        <label for="state-of-origin">State Of Origin</label>
+                        <input type="text" class="form-control" placeholder="State Of Origin" name="SOG"></div>
+                    <div class="form-group">
+                        <label for="LGA">Local Government Area</label>
+                        <input type="text" class="form-control" placeholder="Local Government Area" name="LGA"></div>
+                    <div class="form-group">
+                        <label for="address">Resident's Address</label>
+                        <input type="text" class="form-control" placeholder="Resident's Address" name="res-address"></div>
+                    <div class="form-group">
+                        <label for="former-school">Name of School Previously Attended</label>
+                        <input type="text" class="form-control" placeholder="Name of School" name="schname"></div>
+                    <div class="form-group">
+                        <label for="address-former">Address of the school</label>
+                        <input type="text" class="form-control" placeholder="Address of School" name="addsch"></div>
+                    <div id="title-event">
+                        <h4>&#x1F4AE;&#x1F4AE;&#x1F4AE;Parent's/Guardian's Section&#x1F4AE;&#x1F4AE;&#x1F4AE;</h4>
+                    </div> <hr>
+                    <div class="form-group">
+                        <label for="Pname">Parent's/Guardian's Name</label>
+                        <input placeholder="Name" type="text" class="form-control" name="pname"></div>
+                    <div class="form-group">
+                        <label for="Psurname">Parent's/Guardian's Surname</label>
+                        <input placeholder="Surname" type="text" class="form-control" name="psurname"></div>
+                    <div class="form-group">
+                        <label for="mobile-number">Parent's/Guardian's Mobile Number</label>
+                        <input placeholder="Mobile Number" type="number" class="form-control" name="pnumber"></div>
+                    <div class="form-group">
+                        <label for="email">Parent's/Guardian's Email Address</label>
+                        <input placeholder=" Email Address" type="email" class="form-control" name="pemail"></div>
+                    <div class="form-group">
+                        <label for="address">Parent's/Guardian's House Address</label>
+                        <input placeholder="House Address" type="text" class="form-control" name="padd"></div>
+                    <button class="btn btn-register" type="submit">Register &#x2795;</button>
+                </form> 
+        </div>
+            </div>
+            
+    </div>
+</div>
+	{{>footer}}
+	{{>imports}}
+</body>
+</html>
+</body>
+git remote add origin https://github.com/Muhsar/MySchoolApp.git
