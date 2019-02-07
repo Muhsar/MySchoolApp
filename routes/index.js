@@ -31,6 +31,9 @@ router.get('/send', (req, res) => {
 router.get('/register', (req, res) => {
 	res.render('dash')
 })
+router.get('/class', (req, res) => {
+	res.render('class')
+})
 
 /*  This route redirects requests to Turbo360. */
 router.get('/redirect', (req, res) => {
@@ -40,6 +43,7 @@ router.post('/register', function(req, res, next) {
 	var name = req.body.name
 	var pname = req.body.pname
 	var email = req.body.pemail
+	var clas = req.body.clas
 	var surname = req.body.surname
 	var psurname = req.body.psurname
 	var address = req.body.address
@@ -62,6 +66,7 @@ router.post('/register', function(req, res, next) {
 		ParentsName: pname,
 		email: email,
 		surname: surname,
+		class: clas,
 		ParentsSurname: psurname,
 		address: address,
 		ParentsAddress: padd,

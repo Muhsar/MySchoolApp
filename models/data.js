@@ -13,23 +13,31 @@ surname: {
     type: String
      
 },
-gender: {
+class: {
     type: String
      
 },
-religion: {
+Gender: {
     type: String
      
 },
-date: {
+Religion: {
     type: String
      
 },
-disability: {
+DOB: {
     type: String
      
 },
-nation: {
+Disabilities: {
+    type: String
+     
+},
+address: {
+    type: String
+     
+},
+Nationality: {
     type: String
      
 },
@@ -41,32 +49,33 @@ LGA: {
     type: String
      
 },
-address: {
+
+PreSchoolsName: {
     type: String
      
 },
-schname: {
+PreSchoolsAddress: {
     type: String
      
 },
-addsch: {
+ParentsName: {
     type: String
      
 },
-pname: {
+ParentsNumber: {
     type: String
      
 },
-psurname: {
+ParentsSurname: {
     type: String
      
 },
 
-pemail: {
+email: {
     type: String
      
 },
-padd: {
+ParentsAddress: {
     type: String
      
 }
