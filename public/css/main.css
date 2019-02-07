@@ -3976,3 +3976,10 @@ body {
 .foot {
 	width: 100%;
 }
+.cla li a:hover {
+	font-size: 50px;
+	line-height: 10px;
+}
+.cla li a {
+	color: #534485;
+}
