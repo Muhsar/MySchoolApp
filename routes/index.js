@@ -7,6 +7,7 @@ var multer = require('multer')
 var upload = multer({dest:'./uploads'})
 var Data = require('../models/data')
 var passport = require('passport')
+const storeController = require('../controllers/dataController')
 var localStrategy = require('passport-local').Strategy
 var mongo = require('mongodb')
 var mongoose = require('mongoose')
@@ -15,7 +16,7 @@ var db = mongoose.connection
 	Data is rendered using the Mustache templating engine. For more
 	information, view here: https://mustache.github.io/#demo */
 router.get('/', (req, res) => {
-	res.render('index', {text: 'This is the dynamic data. Open index.js from the routes directory to see.'})
+	res.render('index')
 })
 
 /*  This route render json data */
@@ -34,22 +35,13 @@ router.get('/send', (req, res) => {
 router.get('/register', (req, res) => {
 	res.render('dash')
 })
-router.get('/class/creche', (req, res) => {
-	res.render('creche')
-	var dbo = db.db("mydb");
-  //Exclude the _id field from the result:
-  dbo.collection("Students-list").find({}, { projection: {  name: "creche"} }).toArray(function(err, result) {
-    if (err) throw err;
-    console.log(result);
-    db.close();
-})
-})
+router.get('/creche', (storeController.getData))
 router.get('/class', (req, res) => {
 	res.render('class')
 	
   
 })
-
+router.post('/register',(storeController.createData))
 /*  This route redirects requests to Turbo360. */
 router.get('/redirect', (req, res) => {
 	res.redirect('https://www.turbo360.co/landing')
