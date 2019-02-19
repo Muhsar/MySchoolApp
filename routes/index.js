@@ -7,14 +7,15 @@ var multer = require('multer')
 var upload = multer({dest:'./uploads'})
 var Data = require('../models/data')
 var passport = require('passport')
-const storeController = require('../controllers/dataController')
+const dataController = require('../controllers/dataController')
 var localStrategy = require('passport-local').Strategy
 var mongo = require('mongodb')
 var mongoose = require('mongoose')
+var getAge = require('get-age')
 var db = mongoose.connection
 mongoose.Promise = global.Promise
 // require('./models/data')
-
+// var flash = require('connect-flash')
 router.get('/', (req, res) => {
 	res.render('index.mustache')
 })
@@ -25,8 +26,8 @@ router.get('/', (req, res) => {
 router.get('/register', (req, res) => {
 	res.render('dash.mustache')
 })
-router.get('/creche', (storeController.getData))
-router.get('/students', (storeController.findAll))
+router.get('/creche.pug', (dataController.getData))
+router.get('/students', (dataController.findAll))
 router.get('/class', (req, res) => {
 	res.render('class.mustache')
 	
@@ -56,6 +57,7 @@ router.post('/register', function(req, res, next) {
 	var date = req.body.date
 	var disability = req.body.disability
 	var nation = req.body.nation
+	var Age = getAge(req.body.date)
 	
 	
 	// } else {
@@ -78,14 +80,13 @@ router.post('/register', function(req, res, next) {
 		Nationality: nation,
 		DOB: date,
 		Religion: religion,
+		Age: Age
 	  })
 	  Data.createData(newData, function(err, data){
 		if(err) throw err
 		console.log(data)
 	  })
-	//   req.flash('success', 'Congratulations You are now registered')
-	//   res.location('/')
-	//   res.redirect('/')
+	
 	}
   );
 

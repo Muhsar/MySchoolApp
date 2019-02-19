@@ -6,12 +6,10 @@ var Data = mongoose.model('Data')
 mongoose.Promise = global.Promise
 
 exports.getData = async (req, res)=> {
-    const creche = await Data.find()
-    res.render('creche.mustache', creche)
+    const creches = await Data.find({class: 'creche'})
+    res.render('creche.pug', {title: 'Creche Class', creches})
 }
-exports.findAll = (req, res)=> {
-    Data.find()
-    .then(users => {
-        res.send(users);
-    })
+exports.findAll = async (req, res)=> {
+    const datas = await Data.find()
+    res.render('students.pug', {title: 'Student List', datas})
 }

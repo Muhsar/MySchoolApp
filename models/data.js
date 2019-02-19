@@ -46,6 +46,10 @@ SOG: {
     type: String
      
 },
+Age: {
+    type: String
+     
+},
 LGA: {
     type: String
      

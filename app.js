@@ -40,6 +40,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session')
+var getAge = require('get-age')
 // var passport = require('passport')
 var localStrategy = require('passport-local').Strategy
 var expressValidator = require('express-validator')
@@ -54,12 +55,12 @@ mongoose.Promise = global.Promise
 // set routes
 app.use('/', index)
 app.use('/api', api) // sample API Routes
-app.use(flash())
+// app.use(flash())
 
-app.use((req, res, next)=>{
-	res.locals.flashes = req.flash()
-	next()
-})
+// app.use((req, res, next)=>{
+// 	res.locals.flashes = req.flash()
+// 	next()
+// })
 app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -71,6 +72,7 @@ app.use(session({
     saveUninitialized: true,
     resave: true
 }))
+require('./models/data')
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(expressValidator({
@@ -94,7 +96,6 @@ app.use(function (req, res, next){
 })
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-app.set('view engine', 'ejs');
 // app.set('view engine', 'pug')
 // require('./models/data')
 module.exports = app

@@ -1,0 +1,35 @@
+extends layout
+block content
+    #event.container-fluid
+      .wrap-title-event.row
+        .col-md-6.col-lg-3.nit.nit1
+          .div
+            ul
+              li
+                a(href='#') ⏺ Dashboard
+              li
+                a(href='/register') ➕ Register a new student
+              li
+                a(href='#') 🎉 Events
+              li
+                a(href='/class') 🏛 Classes
+              li
+                a(href='/students') Students 🧒 
+        .col-8.wow.fadeInUp
+            .data-disp
+                h2= title
+                .table-responsive
+                    table.table
+                        thead
+                            tr
+                                th Name
+                                th Gender
+                                th Parents Phone Number
+                                th Age
+                        tbody
+                            each creche in creches
+                                tr
+                                    td= creche.name
+                                    td= creche.Gender
+                                    td= creche.ParentsNumber
+                                    td= creche.Age

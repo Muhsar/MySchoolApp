@@ -1,0 +1,196 @@
+doctype html
+html
+    head
+        title  {{title}} 
+        link(rel='icon', type='image/png', href='images/icons/home-boxed-logo.png')
+        link(rel='stylesheet', href='/css/bootstrap.css', type='text/css')
+        link(rel='stylesheet', href='/css/bootstrap1.css', type='text/css')
+        link(rel='stylesheet', href='/css/bootstrap.min.css', type='text/css')
+        link(rel='stylesheet', type='text/css', href='vendor/bootstrap/css/bootstrap.min.css')
+        link(rel='stylesheet', type='text/css', href='vendor/revolution/css/layers.css')
+        link(rel='stylesheet', type='text/css', href='vendor/revolution/css/navigation.css')
+        link(rel='stylesheet', type='text/css', href='vendor/revolution/css/settings.css')
+        link(rel='stylesheet', type='text/css', href='vendor/css-hamburgers/hamburgers.min.css')
+        link(rel='stylesheet', type='text/css', href='vendor/select2/select2.min.css')
+        link(rel='stylesheet', type='text/css', href='vendor/daterangepicker-bootstrap/daterangepicker.css')
+        link(rel='stylesheet', type='text/css', href='vendor/animsition/dist/css/animsition.min.css')
+        link(rel='stylesheet', type='text/css', href='fonts/font-awesome-4.7.0/css/font-awesome.min.css')
+        link(rel='stylesheet', type='text/css', href='css/main.css')
+        link(rel='stylesheet', type='text/css', href='css/animate.css')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+        body.well.container-fluid
+          header.ed.ed1
+            #wrap_header.ed
+              .logo.col_header
+                a(href='/')
+                  img(alt="jubsat's logo", src='images/logo.jpg', height='80', width='80')
+              .main_nav.ed
+                nav.menu.col_header.ed
+                  ul.main_menu.ed
+                    li
+                      h3.skul Jubsat Success Kids
+                    li
+                      a(href='/') Home 🏠
+                    li
+                      a(href='/register') Register ➕
+                    li
+                        a(href="/students") Students 🧒
+              .icon-header.col_header
+                a(href='#')
+                  i.fa.fa-facebook(aria-hidden='true')
+                a(href='#')
+                  i.fa.fa-twitter(aria-hidden='true')
+                a(href='#')
+                  i.fa.fa-tripadvisor(aria-hidden='true')
+                a(href='#')
+                  i.fa.fa-instagram(aria-hidden='true')
+            #wrap_header_mobile
+              .logo-mobile
+                a(href='/')
+                  img(alt='logo-deli', src='images/logo.jpg')
+                  h2 Jubsat Success Kids
+              // Button show menu
+              .btn-show-menu
+                button.btn-show-menu-mobile.hamburger.hamburger--squeeze(type='button')
+                  span.hamburger-box
+                    span.hamburger-inner
+            .wrap-side-menu
+              nav.side-menu
+                ul.main-menu
+                  li
+                    a(href='/') Home 🏠
+                  li
+                    a(href='/register') Register ➕
+                  li
+                    a(href="/students") Students 🧒
+          .container-fluid
+              block content
+
+
+
+        block footer
+            footer.foot
+              .container.ftg
+                .content-footer.row
+                  .column-footer.col-lg-5.col-md-8.col-sm-7
+                    h3 Contact information
+                    ul
+                      li
+                        | ADDRESS: No. 2, Akinbiya Street,
+                        br
+                        |  Arinko, 
+                        br
+                        |  Sango Otta, 
+                        br
+                        |  Ogun State, 
+                        br
+                        |  Nigeria
+                      li FOR BOOKING: (+234) 810 0581 239
+                      li#follow-us
+                        | FOLLOW US ON: 
+                        a(href='#')
+                          i.fa.fa-facebook(aria-hidden='true')
+                        a(href='#')
+                          i.fa.fa-twitter(aria-hidden='true')
+                        a(href='#')
+                          i.fa.fa-tripadvisor(aria-hidden='true')
+                        a(href='#')
+                          i.fa.fa-instagram(aria-hidden='true')
+                  .column-footer.col-lg-4.col-md-5.col-sm-7
+                    h3 School hours
+                    ul#restaurant-hours
+                      li
+                        span.span-left LUNCH:
+                      li
+                        span.span-left Monday - Friday
+                        span.span-right 11:30AM - 2:00PM
+                      li
+                        span.span-left DINNER:
+                      li
+                        span.span-left Monday - Friday
+                        span.span-right 5:30PM - 11:00PM
+                      li
+                        span.span-left Saturday - Sunday
+                        span.span-right 4:30PM - 10:00PM
+                    .line-divide.first-line
+                  .column-footer.col-lg-3.col-md-3.col-sm-7
+                    h3 Useful links
+                    ul#useful-links
+                      li
+                        span.span-left
+                          a(href='index.html') Home
+                        span.span-right
+                          a(href='shop-page.html') Features
+                      li
+                        span.span-left
+                          a(href='menu-01.html') Menus
+                        span.span-right
+                          a(href='blog-list-with-sidebar-01.html') Blog
+                      li
+                        span.span-left
+                          a(href='reservation-01.html') Reservation
+                        span.span-right
+                          a(href='contact-us.html') Contact us
+                      li
+                        a(href='about-us.html') About us
+                    .line-divide.second-line
+              .wrap-bottom-footer
+                .container
+                  .bottom-footer.row.justify-content-between
+                    .col-12.col-sm-7 &copy; 2019 Jubril Musa&apos;s Design. All rights reserved.
+                    .col-12.col-sm-5
+                      span Privacy policy
+                      span Terms of use
+            #myBtn.btn-back-to-top.reg
+              span.symbol-btn-back-to-top
+                i.fa.fa-angle-double-up(aria-hidden='true')
+
+        block scripts
+            script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+            script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+            script(type='text/javascript', src='vendor/jquery/jquery-3.2.1.min.js')
+            script(type='text/javascript', src='vendor/wow/wow.min.js')
+            script(type='text/javascript').
+              new WOW().init();
+            script(type='text/javascript', src='vendor/animsition/dist/js/animsition.min.js')
+            script(type='text/javascript', src='vendor/bootstrap/js/popper.min.js')
+            script(type='text/javascript', src='vendor/bootstrap/js/bootstrap.min.js')
+            script(type='text/javascript', src='vendor/revolution/js/jquery.themepunch.tools.min.js')
+            script(type='text/javascript', src='vendor/revolution/js/jquery.themepunch.revolution.min.js')
+            script(type='text/javascript', src='vendor/revolution/js/extensions/revolution.extension.video.min.js')
+            script(type='text/javascript', src='vendor/revolution/js/extensions/revolution.extension.carousel.min.js')
+            script(type='text/javascript', src='vendor/revolution/js/extensions/revolution.extension.slideanims.min.js')
+            script(type='text/javascript', src='vendor/revolution/js/extensions/revolution.extension.actions.min.js')
+            script(type='text/javascript', src='vendor/revolution/js/extensions/revolution.extension.layeranimation.min.js')
+            script(type='text/javascript', src='vendor/revolution/js/extensions/revolution.extension.kenburn.min.js')
+            script(type='text/javascript', src='vendor/revolution/js/extensions/revolution.extension.navigation.min.js')
+            script(type='text/javascript', src='vendor/revolution/js/extensions/revolution.extension.migration.min.js')
+            script(type='text/javascript', src='vendor/revolution/js/extensions/revolution.extension.parallax.min.js')
+            script(src='js/slide-custom.js')
+            script(type='text/javascript', src='vendor/select2/select2.min.js')
+            script(type='text/javascript', src='vendor/daterangepicker-bootstrap/moment.min.js')
+            script(type='text/javascript', src='vendor/daterangepicker-bootstrap/daterangepicker.js')
+            script(src='js/main.js')
+            script(src='js/affix.js')
+            script(src='js/alert.js')
+            script(src='js/app.js')
+            script(src='js/bootstrap-notify-custom.js')
+            script(src='js/button.js')
+            script(src='js/carousel.js')
+            script(src='js/collapse.js')
+            script(src='js/contact.js')
+            script(src='js/draggable-jquery-ui.custom.js')
+            script(src='js/dropdown.js')
+            script(src='js/dropzone.js')
+            script(src='js/jquery.js')
+            script(src='js/map-custom.js')
+            script(src='js/modal.js')
+            script(src='js/popover.js')
+            script(src='js/scroll-onepage.js')
+            script(src='js/scrollspy.js')
+            script(src='js/slide100.js')
+            script(src='js/tab.js')
+            script(src='js/tooltip.js')
+            script(src='js/transition.js')
+
